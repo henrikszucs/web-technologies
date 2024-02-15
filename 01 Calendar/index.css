@@ -1,0 +1,66 @@
+/* main table */
+.schedule {
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.schedule table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0px;
+    table-layout: fixed;
+}
+  
+.schedule td, th {
+    border: 1px solid #000000;
+    text-align: left;
+}
+  
+.schedule tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.schedule tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+/* head */
+.schedule thead tr {
+    height: 40px;
+}
+
+.schedule thead th:nth-child(1) {
+    width: 60px;
+}
+
+.schedule thead th {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+}
+
+
+/* body */
+.schedule tbody tr {
+    height: 40px;
+}
+
+.schedule tbody td {
+    vertical-align: bottom;
+    padding-left: 8px;
+}
+
+
+/* event */
+
+.schedule .event {
+    position: absolute;
+    border: 1px solid orange;
+    padding: 1px;
+    text-align: center;
+    background-color: aqua;
+    width: 101px;
+    overflow: auto;
+}

@@ -1,0 +1,110 @@
+/* main table */
+.schedule {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+}
+
+
+/* head */
+.schedule thead tr {
+    height: 40px;
+}
+
+.schedule thead th:nth-child(1) {
+    width: 60px;
+}
+
+.schedule thead th {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+}
+
+
+/* table general */
+.schedule table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    table-layout: fixed;
+}
+  
+.schedule td, th {
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+
+/* table 1*/
+.schedule table:nth-child(1) tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.schedule table:nth-child(1) tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+
+/* table 2*/
+.schedule table:nth-child(2) {
+    position: absolute;
+    top:0px;
+    height: 100%;
+}
+
+.schedule table:nth-child(2) tbody td {
+    vertical-align: top;
+    padding: 0;
+}
+.schedule table:nth-child(2) tbody td div {
+    width: 100%;
+    /*background-color: blueviolet;*/
+    height: 100%;
+    display: inline-table;
+    position: relative;
+}
+
+
+
+
+
+/* body */
+.schedule tbody tr {
+    height: 40px;
+}
+
+.schedule tbody td {
+    vertical-align: bottom;
+    padding-left: 8px;
+}
+
+
+/* event */
+
+.schedule .event {
+    width: calc(100% - 4px);
+    position: absolute;
+    border: 1px solid orange;
+    text-align: center;
+    padding: 1px;
+    background-color: aqua;
+    display: block;
+    overflow: auto;
+}
+
+
+/* add */
+.add {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.add div {
+    padding: 5px;
+    text-align: center;
+}
