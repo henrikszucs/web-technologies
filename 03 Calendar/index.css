@@ -1,9 +1,32 @@
 /* main table */
 .schedule {
-    width: 800px;
+    width: 90vw;
     height: 600px;
+    max-width: 1200px;
     margin: auto;
     position: relative;
+}
+
+/* table general */
+.schedule table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    table-layout: fixed;
+}
+  
+.schedule td, th {
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+.schedule table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.schedule table tr:nth-child(odd) {
+    background-color: #f4f4f4;
 }
 
 
@@ -24,49 +47,18 @@
 }
 
 
-/* table general */
-.schedule table {
-    border-collapse: collapse;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    table-layout: fixed;
-}
-  
-.schedule td, th {
-    border: 1px solid #000000;
-    text-align: left;
-}
-
-
-/* table 1*/
-.schedule table:nth-child(1) tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-.schedule table:nth-child(1) tr:nth-child(odd) {
-    background-color: #f4f4f4;
-}
-
-
-/* table 2*/
-.schedule table:nth-child(2) {
-    position: absolute;
-    top: 0px;
-    height: 100%;
-}
-
-.schedule table:nth-child(2) tbody td {
-    vertical-align: top;
-    padding: 0;
-}
-.schedule table:nth-child(2) tbody td div {
+/* table body*/
+.schedule table tbody td div {
+    padding: 0px;
     width: 100%;
     /*background-color: blueviolet;*/
     height: 100%;
-    /*display: inline-table;*/
     display: table;
     position: relative;
+}
+
+.schedule table tbody td:nth-child(+n + 2) {
+    padding: 0px;
 }
 
 
@@ -87,9 +79,9 @@
 /* event */
 
 .schedule .event {
-    width: calc(100% - 4px);
     position: absolute;
     border: 1px solid orange;
+    width: calc(100% - 4px);
     text-align: center;
     padding: 1px;
     background-color: aqua;
