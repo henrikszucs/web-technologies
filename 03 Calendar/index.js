@@ -24,9 +24,9 @@ const addEvent = function(dayIndex, startTimeStr, endTimeStr, label) {
 
     const pixelSize = (1 / Math.round(window.devicePixelRatio * 100) * 100);
     startVal = startVal / 60 * 100;
-    const startValOffset = 2 + (startVal/100 - 2) * pixelSize;
+    const startValOffset = (startVal/100) * pixelSize * 3;
     endVal = 100 - endVal / 60 * 100;
-    const endValOffset =(endVal / 100) * pixelSize;
+    const endValOffset = (endVal/100) * pixelSize * 3;
     const newSpan = document.createElement("span");
     newSpan.classList.add("event");
     newSpan.style.top = "calc(" + startVal + "%" + " + " + startValOffset + "px)";
