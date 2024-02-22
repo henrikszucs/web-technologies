@@ -1,5 +1,5 @@
 "use strict";
-
+console.log();
 const HourStrToNum = function(str) {
     const arr = str.split(":");
     return parseInt(arr[0]) * 60 + parseInt(arr[1]);
@@ -22,11 +22,11 @@ const addEvent = function(dayIndex, startTimeStr, endTimeStr, label) {
     startVal -= 7 * 60;
     endVal -= 7 * 60;
 
+    const pixelSize = (1 / Math.round(window.devicePixelRatio * 100) * 100);
     startVal = startVal / 60 * 100;
-    const startValOffset = (startVal/100 - 1) * 1;
+    const startValOffset = 2 + (startVal/100 - 2) * pixelSize;
     endVal = 100 - endVal / 60 * 100;
-    const endValOffset = (endVal / 100 - 1) * 1;
-
+    const endValOffset =(endVal / 100) * pixelSize;
     const newSpan = document.createElement("span");
     newSpan.classList.add("event");
     newSpan.style.top = "calc(" + startVal + "%" + " + " + startValOffset + "px)";
