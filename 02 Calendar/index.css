@@ -64,7 +64,7 @@
     width: 100%;
     /*background-color: blueviolet;*/
     height: 100%;
-    display: inline-table;
+    display: table;
     position: relative;
 }
 
