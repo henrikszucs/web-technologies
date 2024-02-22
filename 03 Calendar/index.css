@@ -17,7 +17,7 @@
 }
   
 .schedule td, th {
-    border: 1px solid #000000;
+    border: 0.1em solid #000000;
     text-align: left;
 }
 
@@ -80,8 +80,8 @@
 
 .schedule .event {
     position: absolute;
-    border: 1px solid orange;
-    width: calc(100% - 4px);
+    border: 0.1em solid orange;
+    width: calc(100% - 0.3em);
     text-align: center;
     padding: 1px;
     background-color: aqua;

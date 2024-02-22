@@ -22,15 +22,19 @@ const addEvent = function(dayIndex, startTimeStr, endTimeStr, label) {
     startVal -= 7 * 60;
     endVal -= 7 * 60;
 
-    const pixelSize = (1 / Math.round(window.devicePixelRatio * 100) * 100);
+    let pixelSize = (1 / Math.round(window.devicePixelRatio * 100) * 100);
+    if (pixelSize <= 0.5) {
+        pixelSize = pixelSize + 0.5;
+    }
+    console.log(pixelSize);
     startVal = startVal / 60 * 100;
-    const startValOffset = (startVal/100) * pixelSize;
+    const startValOffset = (parseInt(startVal/100)) * 0.1;
     endVal = 100 - endVal / 60 * 100;
-    const endValOffset = (endVal/100) * pixelSize;
+    const endValOffset = (parseInt(endVal/100)) * 0.1;
     const newSpan = document.createElement("span");
     newSpan.classList.add("event");
-    newSpan.style.top = "calc(" + startVal + "%" + " + " + startValOffset + "px)";
-    newSpan.style.bottom = "calc(" + endVal + "%" + " + " + endValOffset + "px)";
+    newSpan.style.top = "calc(" + startVal + "%" + " + " + startValOffset + "em)";
+    newSpan.style.bottom = "calc(" + endVal + "%" + " + " + endValOffset + "em)";
     newSpan.innerText = labelVal;
 
     const el = document.querySelector(".schedule table tbody tr:nth-child(1) td:nth-child(" + (dayVal + 2) + ") div");
