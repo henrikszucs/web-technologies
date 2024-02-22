@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
         const dayIdx = [6, 0, 1, 2, 3, 4, 5];
         dayEl.selectedIndex = dayIdx[curDate.getDay()];
 
-        startEl.value = curDate.getHours() + ":" + curDate.getMinutes();
+        startEl.value = curDate.getHours().toString().padStart(2, '0') + ":" + curDate.getMinutes().toString().padStart(2, '0');
 
         curDate = new Date(Date.now() + 1000 * 3600);
         endEl.value = curDate.getHours() + ":" + curDate.getMinutes();
